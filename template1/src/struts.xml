@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+
+ <constant name="struts.devMode" value="true"/>
+
+ <package name="com.internousdev.login.action" extends="struts-default">
+
+ <global-results>
+  <result name="exception">FileAttributeError.jsp</result>
+</global-results>
+<global-exception-mappings>
+  <exception-mapping exception="java.io.IOException" result="exception"/>
+</global-exception-mappings>
+
+<action name="GoHomeAction" class="com.internousdev.template1.action.GoHomeAction" method="execute">
+<result name="success">home.jsp</result>
+</action>
+
+<action name="HomeAction" class="com.internousdev.template1.action.HomeAction" method="execute">
+<result name="login">login.jsp</result>
+<result name="root">management.jsp</result>
+<result name="success">buyItem.jsp</result>
+</action>
+
+<action name="LoginAction" class="com.internousdev.template1.action.LoginAction" method="execute">
+<result name="success">buyItem.jsp</result>
+<result name="root">management.jsp</result>
+<result name="error">home.jsp</result>
+</action>
+
+<action name="UserCreateAction" class="com.internousdev.template1.action.UserCreateAction" method="execute">
+<result name="success">userCreate.jsp</result>
+<result name="back">login.jsp</result>
+</action>
+
+<action name="UserCreateConfirmAction" class="com.internousdev.template1.action.UserCreateConfirmAction" method="execute">
+<result name="success">userCreateConfirm.jsp</result>
+<result name="error">userCreate.jsp</result>
+</action>
+
+<action name="UserCreateCompleteAction" class="com.internousdev.template1.action.UserCreateCompleteAction" method="execute">
+<result name="success">userCreateComplete.jsp</result>
+</action>
+
+<action name="BuyItemAction" class="com.internousdev.template1.action.BuyItemAction" method="execute">
+<result name="success">buyItemConfirm.jsp</result>
+<result name="error">buyItem.jsp</result>
+</action>
+
+<action name="BuyItemConfirmAction" class="com.internousdev.template1.action.BuyItemConfirmAction" method="execute">
+<result name="success">buyItemComplete.jsp</result>
+<result name="STAY">confirm.jsp</result>
+</action>
+
+<action name="MyPageAction" class="com.internousdev.template1.action.MyPageAction" method="execute">
+<result name="success">myPage.jsp</result>
+</action>
+
+<action name="LogoutAction" class="com.internousdev.template1.action.LogoutAction" method="execute">
+<result name="success">home.jsp</result>
+</action>
+
+<action name="SupplierLoginAction" class="com.internousdev.template1.action.SupplierLoginAction" method="execute">
+<result name="success">SupplierPage.jsp</result>
+<result name="error">ForSupplier.jsp</result>
+</action>
+
+<action name="SupplierCreateAccountAction" class="com.internousdev.template1.action.SupplierCreateAccountAction" method="execute">
+<result name="success">SupplierCreateAccountConfirm.jsp</result>
+<result name="error">SupplierCreateAccount.jsp</result>
+</action>
+
+<action name="SupplierCreateAccountCompleteAction" class="com.internousdev.template1.action.SupplierCreateAccountCompleteAction" method="execute">
+<result name="success">SupplierCreateAccountComplete.jsp</result>
+</action>
+
+<action name="CartrAddAction" class="com.internousdev.template1.action.CartrAddAction" method="execute">
+<result name="success">Cart.jsp</result>
+</action>
+
+<action name="CartDeleteAction" class="com.internousdev.template1.action.CartDeleteAction" method="execute">
+<result name="success">Cart.jsp</result>
+</action>
+
+<action name="ConfirmAction" class="com.internousdev.template1.action.ConfirmAction" method="execute">
+<result name="success">confirm.jsp</result>
+</action>
+
+<action name="GoCartAction" class="com.internousdev.template1.action.GoCartAction" method="execute">
+<result name="success">Cart.jsp</result>
+</action>
+
+<action name="CertificationAction" class="com.internousdev.template1.action.CertificationAction" method="execute">
+<result name="success">Certification.jsp</result>
+</action>
+<action name="ResisterItemAction" class="com.internousdev.template1.action.ResisterItemAction" method="execute">
+<result name="success">ResisterComplete.jsp</result>
+<result name="error">ResisterError.jsp</result>
+</action>
+
+<action name="MakelistAction" class="com.internousdev.template1.action.MakelistAction" method="execute">
+<result name="SelectUser">SelectUser.jsp</result>
+<result name="SelectItem">SelectItem.jsp</result>
+<result name="error">SelectError.jsp</result>
+</action>
+
+<action name="ThrowSelectItemAction" class="com.internousdev.template1.action.ThrowSelectItemAction" method="execute">
+<result name="success">interval.jsp</result>
+</action>
+
+<action name="ThrowSelectUserAction" class="com.internousdev.template1.action.ThrowSelectUserAction" method="execute">
+<result name="success">interval.jsp</result>
+</action>
+
+<action name="DeleteByAutholizerAction" class="com.internousdev.template1.action.DeleteByAutholizerAction" method="execute">
+<result name="success">DeleteResult.jsp</result>
+<result name="error">DeleteResultFailed.jsp</result>
+</action>
+<action name="DeleteItemsByAutholizerAction" class="com.internousdev.template1.action.DeleteItemsByAutholizerAction" method="execute">
+<result name="success">DeleteResult.jsp</result>
+<result name="error">DeleteResultFailed.jsp</result>
+</action>
+
+<action name="ConfirmErrorReturnAction" class="com.internousdev.template1.action.ConfirmErrorReturnAction" method="execute">
+<result name="success">Cart.jsp</result>
+</action>
+
+<action name="ItemSearchAction" class="com.internousdev.template1.action.ItemSearchAction" method="execute">
+<result name="success">buyItem.jsp</result>
+</action>
+
+<action name="GoManagementPageAction" class="com.internousdev.template1.action.GoManagementPageAction" method="execute">
+<result name="success">management.jsp</result>
+</action>
+
+<action name="SendAction" class="com.internousdev.template1.action.SendAction" method="execute">
+<result name="success">management.jsp</result>
+</action>
+
+<action name="doUpload" class="com.internousdev.template1.action.NewResisterItemAction">
+<!-- <interceptor-ref name="basicStack"/> -->
+<!--     <interceptor-ref name="fileUpload"> -->
+<!--         <param name="allowedTypes">image/jpg,image</param> -->
+<!--         <param name="maximumSize">500000</param> -->
+<!--     </interceptor-ref> -->
+<!--     <interceptor-ref name="validation"/> -->
+<!--     <interceptor-ref name="workflow"/> -->
+<result name="success">InsertCertification.jsp</result>
+</action>
+
+<action name="ShowDetailAction" class="com.internousdev.template1.action.ShowDetailAction">
+<result name="success">ItemDetails.jsp</result>
+</action>
+ </package>
+ </struts>
